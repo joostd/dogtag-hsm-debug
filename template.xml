@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CertEnrollmentRequest>
+    <Attributes/>
+    <ProfileID>caCACert</ProfileID>
+    <Renewal>false</Renewal>
+    <RemoteHost/>
+    <RemoteAddress/>
+    <Input id="i1">
+        <ClassID>certReqInputImpl</ClassID>
+        <Name>Certificate Request Input</Name>
+        <Attribute name="cert_request_type">
+		<Value>pkcs10</Value>
+            <Descriptor>
+                <Syntax>cert_request_type</Syntax>
+                <Description>Certificate Request Type</Description>
+            </Descriptor>
+        </Attribute>
+        <Attribute name="cert_request">
+            <Value>
+-----BEGIN CERTIFICATE REQUEST-----
+MIICVDCCATwCAQAwDzENMAsGA1UEAwwEdGVzdDCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAL6fSzZIqDYaz+O4WamobixapcoALtNqz1sglijmTHd4CsAr
+PpqKRyiar4+Q6DlfF1cMVLoenpVUCjuqu0oUet+D0ckoAbbzPpxA7UN2VQyP4wqG
+4k2Hf0FJCmswiJvR2Dfvlx7wjNKBTpZrQSGl2MDXNzumnM8lACyhYiCkAwnBxg9m
+GLBC0K2h0G/hovWnzGQbWXtviDK18DnQocINSS4NZK/oMB86nhGPavPwdYJ5wk6Y
+hWUP0vUns5Z39hutASn8KNi0a06++bXsCqNiLwXf2/boseU9daqrxXXD/a3HV+Ii
+XIs/ouLamp6LSf8gWZ6lyi7BnBUitFgnThjZG2MCAwEAAaAAMA0GCSqGSIb3DQEB
+CwUAA4IBAQBumRmYdQ7heGzZ+w8fm5zzojNUY2gqVOeMpVPIL6VHdWPfTe/Fv22R
+LSWFI/WwAM+eAE7JWywjEx3x/3ULmUAYqOJesv6lE0UXoYHwWgbkP+h8mPZJcu6f
+MJatAX9OSoom7vfcBQI5YvJ9gyfTFxtYU6uB0I7iTtE/aeOgGrejVHiF/fO5jKA1
+8SMMysbuWsFRTB2OMbr0qrriebcQPjW1pne32UqNf7x30K9WBZGi6h1vJFxZWCPA
+DY7cqGtiLy/b5IsmbQX6nFnIDdC2hmani+yhVhdpgwINGcQ7p7LHrftdVeQ+0Itt
+oeeQpjhubCvoWUlj/n5SsewPPphZX01g
+-----END CERTIFICATE REQUEST-----
+	    </Value>
+            <Descriptor>
+                <Syntax>cert_request</Syntax>
+                <Description>Certificate Request</Description>
+            </Descriptor>
+        </Attribute>
+    </Input>
+    <Input id="i2">
+        <ClassID>submitterInfoInputImpl</ClassID>
+        <Name>Requestor Information</Name>
+        <Attribute name="requestor_name">
+            <Value/>
+            <Descriptor>
+                <Syntax>string</Syntax>
+                <Description>Requestor Name</Description>
+            </Descriptor>
+        </Attribute>
+        <Attribute name="requestor_email">
+            <Value/>
+            <Descriptor>
+                <Syntax>string</Syntax>
+                <Description>Requestor Email</Description>
+            </Descriptor>
+        </Attribute>
+        <Attribute name="requestor_phone">
+            <Value/>
+            <Descriptor>
+                <Syntax>string</Syntax>
+                <Description>Requestor Phone</Description>
+            </Descriptor>
+        </Attribute>
+    </Input>
+</CertEnrollmentRequest>

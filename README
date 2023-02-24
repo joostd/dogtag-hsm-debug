@@ -1,0 +1,15 @@
+sudo systemctl start pki-tomcatd@pki-tomcat.service
+
+sudo systemctl start dirsrv.target
+
+sudo certutil -d /etc/pki/pki-tomcat/alias -L
+
+sudo pki -d /etc/pki/pki-tomcat/alias nss-cert-show sslserver
+
+
+openssl pkcs12 -in /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+
+
+sudo certutil -d .dogtag/pki-tomcat/ca/alias -L
+sudo pki -d /root/.dogtag/pki-tomcat/ca/alias nss-cert-show caadmin
+
