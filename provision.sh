@@ -1,1 +1,1 @@
-softhsm.sh
+yubihsm.sh
