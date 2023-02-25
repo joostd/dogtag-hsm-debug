@@ -17,10 +17,15 @@ dscreate from-file /vagrant/ds.inf
 ldapadd -H ldap://ubuntu-jammy  -x -D "cn=Directory Manager" -w Secret.123 -f /vagrant/example.ldif
 # ca
 apt install -y dogtag-pki
-#pkispawn -f /vagrant/nohsm-ca.cfg -s CA
 
 cp /vagrant/patches/configuration.py /usr/lib/python3/dist-packages/pki/server/deployment/scriptlets/
-cp /vagrant/_patches/_init__.py /usr/lib/python3/dist-packages/pki/server/deployment/
+cp /vagrant/patches/__init__.py /usr/lib/python3/dist-packages/pki/server/deployment/
 
+# pki-tomcat[13948]: Caused by: java.nio.file.NoSuchFileException: /var/lib/pki/pki-tomcat/conf/serverCertNick.conf
+cp /usr/share/pki/server/conf/serverCertNick.conf /var/lib/pki/pki-tomcat/conf/
+
+cat /vagrant/pki.conf  >> /etc/pki/pki.conf
 #pkispawn -f /vagrant/yubihsm-ca.cfg -s CA --debug --log-file ./log
 #pkidestroy -s CA --force
+
+# pki-tomcat[14242]: SEVERE: Context [/ca] startup failed due to previous errors
