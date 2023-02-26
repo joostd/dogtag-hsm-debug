@@ -61,6 +61,10 @@ journalctl -xeu pki-tomcatd@pki-tomcat.service
 
 ssh 127.0.0.1 -l vagrant -p 2222 -o "UserKnownHostsFile /dev/null" -i /Users/jodi/dogtag/ubuntu/.vagrant/machines/default/virtualbox/private_key -o "StrictHostKeyChecking no" -R 12345:localhost:12345
 
+or
+
+vagrant ssh -- -R 12345:localhost:12345
+
 export YUBIHSM_PKCS11_CONF=/vagrant/yubihsm_pkcs11.conf
 export YUBIHSM_PKCS11_MODULE=/usr/lib/x86_64-linux-gnu/pkcs11/yubihsm_pkcs11.so
 
