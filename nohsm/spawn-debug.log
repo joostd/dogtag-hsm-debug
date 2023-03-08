@@ -1,0 +1,628 @@
+2023-03-07 11:28:35 INFO: Connecting to LDAP server at ldap://ubuntu-jammy:389
+2023-03-07 11:28:35 INFO: Connecting to LDAP server at ldap://ubuntu-jammy:389
+2023-03-07 11:28:35 INFO: BEGIN spawning CA subsystem in pki-tomcat instance
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Setting up pkiuser group
+2023-03-07 11:28:35 INFO: Reusing existing pkiuser group with GID 122
+2023-03-07 11:28:35 INFO: Setting up pkiuser user
+2023-03-07 11:28:35 INFO: Reusing existing pkiuser user with UID 114
+2023-03-07 11:28:35 DEBUG: Retrieving UID for 'pkiuser'
+2023-03-07 11:28:35 DEBUG: UID of 'pkiuser' is 114
+2023-03-07 11:28:35 DEBUG: Retrieving GID for 'pkiuser'
+2023-03-07 11:28:35 DEBUG: GID of 'pkiuser' is 122
+2023-03-07 11:28:35 INFO: Initialization
+2023-03-07 11:28:35 INFO: Appending logs to /var/log/pki/pki-tomcat
+2023-03-07 11:28:35 INFO: Setting up infrastructure
+2023-03-07 11:28:35 INFO: Creating /etc/dogtag/tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /etc/dogtag/tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /etc/dogtag/tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /etc/dogtag/tomcat/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating /etc/dogtag/tomcat/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /etc/dogtag/tomcat/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /etc/dogtag/tomcat/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /etc/dogtag/tomcat/pki-tomcat/ca
+2023-03-07 11:28:35 INFO: Creating /etc/dogtag/tomcat/pki-tomcat/ca/default.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp -p /usr/share/pki/server/etc/default.cfg /etc/dogtag/tomcat/pki-tomcat/ca/default.cfg
+2023-03-07 11:28:35 DEBUG: Command: chmod 660 /etc/dogtag/tomcat/pki-tomcat/ca/default.cfg
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /etc/dogtag/tomcat/pki-tomcat/ca/default.cfg
+2023-03-07 11:28:35 DEBUG: Command: touch /etc/dogtag/tomcat/pki-tomcat/ca/deployment.cfg
+2023-03-07 11:28:35 DEBUG: Command: chmod 660 /etc/dogtag/tomcat/pki-tomcat/ca/deployment.cfg
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /etc/dogtag/tomcat/pki-tomcat/ca/deployment.cfg
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/ca
+2023-03-07 11:28:35 INFO: Preparing pki-tomcat instance
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: mkdir /etc/pki/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Using specified server NSS database password
+2023-03-07 11:28:35 INFO: Using specified internal database password
+2023-03-07 11:28:35 INFO: Generating random replication manager password
+2023-03-07 11:28:35 INFO: Creating /var/log/pki/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/server/conf/tomcat.conf /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/server.xml
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/server/conf/server.xml /etc/pki/pki-tomcat/server.xml
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/catalina.properties
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/pki/server/conf/catalina.properties /etc/pki/pki-tomcat/catalina.properties
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/context.xml
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/tomcat9/skel/conf/context.xml /etc/pki/pki-tomcat/context.xml
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/logging.properties
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/pki/server/conf/logging.properties /etc/pki/pki-tomcat/logging.properties
+2023-03-07 11:28:35 INFO: Creating /etc/default/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/server/conf/tomcat.conf /etc/default/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/server/conf/tomcat.conf /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/web.xml
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/tomcat9/skel/conf/web.xml /etc/pki/pki-tomcat/web.xml
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/Catalina
+2023-03-07 11:28:35 DEBUG: Command: mkdir /etc/pki/pki-tomcat/Catalina
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/Catalina/localhost
+2023-03-07 11:28:35 DEBUG: Command: mkdir /etc/pki/pki-tomcat/Catalina/localhost
+2023-03-07 11:28:35 INFO: Deploying ROOT web application
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/Catalina/localhost/ROOT.xml
+2023-03-07 11:28:35 INFO: Deploying /pki web application
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/Catalina/localhost/pki.xml
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/lib
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/pki/server/lib /var/lib/pki/pki-tomcat/lib
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/common
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/lib/pki/pki-tomcat/common
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/common/lib
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/pki/server/common/lib /var/lib/pki/pki-tomcat/common/lib
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/temp
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/temp
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/temp
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/temp
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/work
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/work
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/work
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/work
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/work/Catalina
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/work/Catalina
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/work/Catalina
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/work/Catalina
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/work/Catalina/localhost
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/work/Catalina/localhost
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/work/Catalina/localhost
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/work/Catalina/localhost
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/work/Catalina/localhost/_
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/work/Catalina/localhost/_
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/work/Catalina/localhost/_
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/work/Catalina/localhost/_
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/work/Catalina/localhost/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/work/Catalina/localhost/ca
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/work/Catalina/localhost/ca
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/work/Catalina/localhost/ca
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/bin
+2023-03-07 11:28:35 DEBUG: Command: ln -s /usr/share/tomcat9/bin /var/lib/pki/pki-tomcat/bin
+2023-03-07 11:28:35 DEBUG: Command: chown -h 114:122 /var/lib/pki/pki-tomcat/bin
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: ln -s /bin/true /var/lib/pki/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: chown -h 0:0 /var/lib/pki/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: systemctl daemon-reload
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/conf
+2023-03-07 11:28:35 DEBUG: Command: ln -s /etc/pki/pki-tomcat /var/lib/pki/pki-tomcat/conf
+2023-03-07 11:28:35 DEBUG: Command: chown -h 114:122 /var/lib/pki/pki-tomcat/conf
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/logs
+2023-03-07 11:28:35 DEBUG: Command: ln -s /var/log/pki/pki-tomcat /var/lib/pki/pki-tomcat/logs
+2023-03-07 11:28:35 DEBUG: Command: chown -h 114:122 /var/lib/pki/pki-tomcat/logs
+2023-03-07 11:28:35 INFO: Creating /etc/systemd/system/pki-tomcatd.target.wants/pki-tomcatd@pki-tomcat.service
+2023-03-07 11:28:35 DEBUG: Command: ln -s /lib/systemd/system/pki-tomcatd@.service /etc/systemd/system/pki-tomcatd.target.wants/pki-tomcatd@pki-tomcat.service
+2023-03-07 11:28:35 DEBUG: Command: chown -h 114:122 /etc/systemd/system/pki-tomcatd.target.wants/pki-tomcatd@pki-tomcat.service
+2023-03-07 11:28:35 INFO: Creating /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/setup/pkidaemon_registry /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 INFO: Creating CA subsystem
+2023-03-07 11:28:35 INFO: Creating /var/log/pki/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/log/pki/pki-tomcat/ca
+2023-03-07 11:28:35 INFO: Creating /var/log/pki/pki-tomcat/ca/archive
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/log/pki/pki-tomcat/ca/archive
+2023-03-07 11:28:35 INFO: Creating /var/log/pki/pki-tomcat/ca/signedAudit
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/log/pki/pki-tomcat/ca/signedAudit
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir /etc/pki/pki-tomcat/ca
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/CS.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/CS.cfg /etc/pki/pki-tomcat/ca/CS.cfg
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/registry.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/registry.cfg /etc/pki/pki-tomcat/ca/registry.cfg
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/emails
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/lib/pki/pki-tomcat/ca/emails
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/reqInQueue_RA.html /var/lib/pki/pki-tomcat/ca/emails/reqInQueue_RA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/publishCerts.html /var/lib/pki/pki-tomcat/ca/emails/publishCerts.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certIssued_CA /var/lib/pki/pki-tomcat/ca/emails/certIssued_CA
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/riq1Summary.html /var/lib/pki/pki-tomcat/ca/emails/riq1Summary.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/rnJob1.txt /var/lib/pki/pki-tomcat/ca/emails/rnJob1.txt
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/ExpiredUnpublishJobItem /var/lib/pki/pki-tomcat/ca/emails/ExpiredUnpublishJobItem
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/rnJob1Summary.txt /var/lib/pki/pki-tomcat/ca/emails/rnJob1Summary.txt
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certRequestRejected.html /var/lib/pki/pki-tomcat/ca/emails/certRequestRejected.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certRevoked_RA.html /var/lib/pki/pki-tomcat/ca/emails/certRevoked_RA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/reqInQueue_RA /var/lib/pki/pki-tomcat/ca/emails/reqInQueue_RA
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certRevoked_CA.html /var/lib/pki/pki-tomcat/ca/emails/certRevoked_CA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/publishCertsItem.html /var/lib/pki/pki-tomcat/ca/emails/publishCertsItem.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/riq1Item.html /var/lib/pki/pki-tomcat/ca/emails/riq1Item.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/euJob1Item.html /var/lib/pki/pki-tomcat/ca/emails/euJob1Item.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/reqInQueue_CA.html /var/lib/pki/pki-tomcat/ca/emails/reqInQueue_CA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certIssued_RA /var/lib/pki/pki-tomcat/ca/emails/certIssued_RA
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/reqInQueue_CA /var/lib/pki/pki-tomcat/ca/emails/reqInQueue_CA
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certIssued_CA.html /var/lib/pki/pki-tomcat/ca/emails/certIssued_CA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/ExpiredUnpublishJob /var/lib/pki/pki-tomcat/ca/emails/ExpiredUnpublishJob
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/rnJob1Item.txt /var/lib/pki/pki-tomcat/ca/emails/rnJob1Item.txt
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/euJob1.html /var/lib/pki/pki-tomcat/ca/emails/euJob1.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certRevoked_RA /var/lib/pki/pki-tomcat/ca/emails/certRevoked_RA
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certIssued_RA.html /var/lib/pki/pki-tomcat/ca/emails/certIssued_RA.html
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/emails/certRevoked_CA /var/lib/pki/pki-tomcat/ca/emails/certRevoked_CA
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/profiles/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/lib/pki/pki-tomcat/ca/profiles
+2023-03-07 11:28:35 DEBUG: Command: mkdir /var/lib/pki/pki-tomcat/ca/profiles/ca
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserDelegateAuthKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserDelegateAuthKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCECsubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCECsubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caStorageCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caStorageCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caRAagentCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caRAagentCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caFullCMCUserSignedCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caFullCMCUserSignedCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTempTokenUserSigningKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTempTokenUserSigningKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthTransportCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthTransportCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECSubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECSubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caServerCertWithSCT.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caServerCertWithSCT.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caOtherCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caOtherCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthDRMstorageCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthDRMstorageCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCkraStorageCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCkraStorageCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCcaIssuanceProtectionCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCcaIssuanceProtectionCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserSigningKeyRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserSigningKeyRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECDualCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECDualCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caRouterCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caRouterCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECInternalAuthServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECInternalAuthServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/acmeServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/acmeServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caUserSMIMEcapCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caUserSMIMEcapCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDirUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDirUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCECUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCECUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caJarSigningCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caJarSigningCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECFullCMCUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECFullCMCUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caUUIDdeviceCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caUUIDdeviceCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCauditSigningCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCauditSigningCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSSLClientSelfRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSSLClientSelfRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDirBasedDualCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDirBasedDualCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDirPinUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDirPinUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTPSCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTPSCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECAdminCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECAdminCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caOCSPCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caOCSPCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenMSLoginEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenMSLoginEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTransportCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTransportCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCkraTransportCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCkraTransportCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCECserverCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCECserverCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCcaCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCcaCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caAgentServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caAgentServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserAuthKeyRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserAuthKeyRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caFullCMCSharedTokenCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caFullCMCSharedTokenCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTempTokenDeviceKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTempTokenDeviceKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthAuditSigningCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthAuditSigningCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caRACert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caRACert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDualRAuserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDualRAuserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caAdminCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caAdminCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCrossSignedCACert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCrossSignedCACert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCserverCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCserverCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCsubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCsubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserDelegateSigningKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserDelegateSigningKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSignedLogCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSignedLogCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/ECAdminCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/ECAdminCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenDeviceKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenDeviceKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDualCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDualCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caServerKeygen_DirUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caServerKeygen_DirUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserEncryptionKeyRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserEncryptionKeyRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserEncryptionKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserEncryptionKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECServerCertWithSCT.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECServerCertWithSCT.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caFullCMCUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caFullCMCUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caRAserverCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caRAserverCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSimpleCMCUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSimpleCMCUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSigningECUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSigningECUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caEncECUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caEncECUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caDirUserRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caDirUserRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECFullCMCUserSignedCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECFullCMCUserSignedCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECInternalAuthSubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECInternalAuthSubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthOCSPCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthOCSPCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caEncUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caEncUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caAuditSigningCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caAuditSigningCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCACert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCACert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caSigningUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caSigningUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/DomainController.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/DomainController.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caManualRenewal.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caManualRenewal.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECSimpleCMCUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECSimpleCMCUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECDirPinUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECDirPinUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/AdminCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/AdminCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caCMCocspCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caCMCocspCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTempTokenUserEncryptionKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTempTokenUserEncryptionKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caAgentFileSigning.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caAgentFileSigning.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECFullCMCSharedTokenCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECFullCMCSharedTokenCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caTokenUserSigningKeyEnrollment.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caTokenUserSigningKeyEnrollment.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECDirUserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECDirUserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caECAgentServerCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caECAgentServerCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInstallCACert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInstallCACert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caInternalAuthSubsystemCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caInternalAuthSubsystemCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caServerKeygen_UserCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caServerKeygen_UserCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caRARouterCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caRARouterCert.cfg
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/profiles/ca/caIPAserviceCert.cfg /var/lib/pki/pki-tomcat/ca/profiles/ca/caIPAserviceCert.cfg
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/flatfile.txt
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/flatfile.txt /etc/pki/pki-tomcat/ca/flatfile.txt
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/adminCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/rsaAdminCert.profile /etc/pki/pki-tomcat/ca/adminCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/caAuditSigningCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/caAuditSigningCert.profile /etc/pki/pki-tomcat/ca/caAuditSigningCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/caCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/caCert.profile /etc/pki/pki-tomcat/ca/caCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/caOCSPCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/caOCSPCert.profile /etc/pki/pki-tomcat/ca/caOCSPCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/serverCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/rsaServerCert.profile /etc/pki/pki-tomcat/ca/serverCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/subsystemCert.profile
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/rsaSubsystemCert.profile /etc/pki/pki-tomcat/ca/subsystemCert.profile
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/ca/proxy.conf
+2023-03-07 11:28:35 DEBUG: Command: cp /usr/share/pki/ca/conf/proxy.conf /etc/pki/pki-tomcat/ca/proxy.conf
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/conf
+2023-03-07 11:28:35 DEBUG: Command: ln -s /etc/pki/pki-tomcat/ca /var/lib/pki/pki-tomcat/ca/conf
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/logs
+2023-03-07 11:28:35 DEBUG: Command: ln -s /var/log/pki/pki-tomcat/ca /var/lib/pki/pki-tomcat/ca/logs
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/registry
+2023-03-07 11:28:35 DEBUG: Command: ln -s /etc/dogtag/tomcat/pki-tomcat /var/lib/pki/pki-tomcat/ca/registry
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: - user: pkiuser
+2023-03-07 11:28:35 DEBUG: - group: pkiuser
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting signing cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting ocsp_signing cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting sslserver cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting subsystem cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting audit_signing cert info from CS.cfg
+2023-03-07 11:28:35 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Deploying /ca web application
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: - user: pkiuser
+2023-03-07 11:28:35 DEBUG: - group: pkiuser
+2023-03-07 11:28:35 INFO: Creating /var/lib/pki/pki-tomcat/ca/webapps
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /var/lib/pki/pki-tomcat/ca/webapps
+2023-03-07 11:28:35 DEBUG: Command: chmod 770 /var/lib/pki/pki-tomcat/ca/webapps
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /var/lib/pki/pki-tomcat/ca/webapps
+2023-03-07 11:28:35 INFO: Setting up ownerships, permissions, and ACLs on /var/lib/pki/pki-tomcat/ca/webapps
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: - user: pkiuser
+2023-03-07 11:28:35 DEBUG: - group: pkiuser
+2023-03-07 11:28:35 INFO: Creating password file: /etc/pki/pki-tomcat/pfile
+2023-03-07 11:28:35 INFO: Updating /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 DEBUG: Command: chmod 660 /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Creating /etc/pki/pki-tomcat/alias
+2023-03-07 11:28:35 DEBUG: Command: mkdir /etc/pki/pki-tomcat/alias
+2023-03-07 11:28:35 INFO: Creating NSS database: /etc/pki/pki-tomcat/alias
+2023-03-07 11:28:35 DEBUG: Command: certutil -N -d /etc/pki/pki-tomcat/alias -f /etc/pki/pki-tomcat/pfile
+2023-03-07 11:28:35 DEBUG: Command: ln -s /etc/pki/pki-tomcat/alias /var/lib/pki/pki-tomcat/alias
+2023-03-07 11:28:35 DEBUG: Command: ln -s /var/lib/pki/pki-tomcat/alias /var/lib/pki/pki-tomcat/ca/alias
+2023-03-07 11:28:35 INFO: Removing /etc/pki/pki-tomcat/pfile
+2023-03-07 11:28:35 DEBUG: Command: rm -f /etc/pki/pki-tomcat/pfile
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting signing cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting ocsp_signing cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting sslserver cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting subsystem cert info from CS.cfg
+2023-03-07 11:28:35 DEBUG: get_subsystem_cert
+2023-03-07 11:28:35 INFO: Getting audit_signing cert info from CS.cfg
+2023-03-07 11:28:35 INFO: Injecting SAN: False
+2023-03-07 11:28:35 INFO: SSL server cert SAN: 
+2023-03-07 11:28:35 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Creating /root/.dogtag/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: mkdir -p /root/.dogtag/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chmod 755 /root/.dogtag/pki-tomcat/ca
+2023-03-07 11:28:35 DEBUG: Command: chown 0:0 /root/.dogtag/pki-tomcat/ca
+2023-03-07 11:28:35 INFO: Creating password file: /root/.dogtag/pki-tomcat/ca/password.conf
+2023-03-07 11:28:35 INFO: Updating /root/.dogtag/pki-tomcat/ca/password.conf
+2023-03-07 11:28:35 DEBUG: Command: chmod 660 /root/.dogtag/pki-tomcat/ca/password.conf
+2023-03-07 11:28:35 DEBUG: Command: chown 0:0 /root/.dogtag/pki-tomcat/ca/password.conf
+2023-03-07 11:28:35 INFO: Storing PKCS #12 password in /root/.dogtag/pki-tomcat/ca/pkcs12_password.conf
+2023-03-07 11:28:35 INFO: Updating /root/.dogtag/pki-tomcat/ca/pkcs12_password.conf
+2023-03-07 11:28:35 DEBUG: Command: chmod 660 /root/.dogtag/pki-tomcat/ca/pkcs12_password.conf
+2023-03-07 11:28:35 DEBUG: Command: chown 114:122 /root/.dogtag/pki-tomcat/ca/pkcs12_password.conf
+2023-03-07 11:28:35 DEBUG: Command: mkdir /root/.dogtag/pki-tomcat/ca/alias
+2023-03-07 11:28:35 DEBUG: Command: certutil -N -d /root/.dogtag/pki-tomcat/ca/alias -f /root/.dogtag/pki-tomcat/ca/password.conf
+2023-03-07 11:28:35 INFO: SELinux disabled
+2023-03-07 11:28:35 INFO: Generating system keys
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: - user: pkiuser
+2023-03-07 11:28:35 DEBUG: - group: pkiuser
+2023-03-07 11:28:35 INFO: Configuring subsystem
+2023-03-07 11:28:35 INFO: Loading instance: pki-tomcat
+2023-03-07 11:28:35 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:28:35 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:28:35 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:28:35 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:28:35 DEBUG: - user: pkiuser
+2023-03-07 11:28:35 DEBUG: - group: pkiuser
+2023-03-07 11:28:35 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:35 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:35 INFO: Checking existing SSL server cert: sslserver
+2023-03-07 11:28:35 INFO: nssdb.get_cert
+2023-03-07 11:28:35 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpe6ib72m3/password.txt -n sslserver -a
+2023-03-07 11:28:35 INFO: Creating temp SSL server cert for ubuntu-jammy
+2023-03-07 11:28:35 DEBUG: Command: openssl rand -out /tmp/tmpuqzl8tdr/noise 2048
+2023-03-07 11:28:35 DEBUG: Command: certutil -R -d /etc/pki/pki-tomcat/alias -k rsa -g 2048 -z /tmp/tmpuqzl8tdr/noise -f /tmp/tmpuqzl8tdr/password.txt -s cn=ubuntu-jammy,o=2023-03-07 11:28:35 -o /tmp/tmpuqzl8tdr/request.bin
+2023-03-07 11:28:35 DEBUG: Command: certutil -C -d /etc/pki/pki-tomcat/alias -x -f /tmp/tmp2dj_cx8o/password.txt -a -i /tmp/tmpg3fncqb6/sslserver.csr -o /tmp/tmpg3fncqb6/sslserver.crt -m 0 -v 12
+2023-03-07 11:28:36 DEBUG: nssdb.add_cert
+2023-03-07 11:28:36 DEBUG: Command: certutil -A -d /etc/pki/pki-tomcat/alias -f /tmp/tmp2dj_cx8o/internal_password.txt -n sslserver -a -i /tmp/tmpg3fncqb6/sslserver.crt -t CTu,CTu,CTu
+2023-03-07 11:28:36 INFO: Creating new security domain
+2023-03-07 11:28:36 INFO: Using CA at https://ubuntu-jammy:8443
+2023-03-07 11:28:36 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:36 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:36 INFO: Removing existing database
+2023-03-07 11:28:36 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-db-remove --force --debug
+2023-03-07 11:28:38 INFO: Initializing database
+2023-03-07 11:28:38 INFO: - internaldb.ldapconn.port: 389
+2023-03-07 11:28:38 INFO: - internaldb.ldapconn.secureConn: false
+2023-03-07 11:28:38 INFO: - pki_clone_replication_security: None
+2023-03-07 11:28:38 INFO: - pki_clone_replication_clone_port: 
+2023-03-07 11:28:38 INFO: - pki_clone_replication_master_port: 
+2023-03-07 11:28:38 INFO: - replication_security: None
+2023-03-07 11:28:38 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-db-init --setup-schema --create-database --create-base --create-containers --replication-security None --debug
+2023-03-07 11:28:45 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-db-vlv-add --debug
+2023-03-07 11:28:47 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-db-vlv-reindex --debug
+2023-03-07 11:28:50 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:28:50 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:28:50 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-profile-import --input-folder /usr/share/pki/ca/profiles/ca --debug
+2023-03-07 11:28:52 INFO: Enabling CA subsystem
+2023-03-07 11:28:52 INFO: Creating /etc/pki/pki-tomcat/Catalina/localhost/ca.xml
+2023-03-07 11:28:52 INFO: Starting PKI server
+2023-03-07 11:28:52 DEBUG: Command: systemctl start pki-tomcatd@pki-tomcat.service
+2023-03-07 11:28:53 INFO: Waiting for PKI server to start
+2023-03-07 11:28:59 INFO: PKI server started
+2023-03-07 11:28:59 INFO: Waiting for CA subsystem
+2023-03-07 11:29:00 INFO: Subsystem status: running
+2023-03-07 11:29:00 DEBUG: get_subsystem_cert
+2023-03-07 11:29:00 INFO: Getting signing cert info from CS.cfg
+2023-03-07 11:29:00 INFO: get_nssdb_cert_info
+2023-03-07 11:29:00 INFO: Getting signing cert info from NSS database
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info begins: ca_signing
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpfx3w8g0g/password.txt -n ca_signing -a
+2023-03-07 11:29:00 DEBUG: get_subsystem_cert
+2023-03-07 11:29:00 INFO: Getting ocsp_signing cert info from CS.cfg
+2023-03-07 11:29:00 INFO: get_nssdb_cert_info
+2023-03-07 11:29:00 INFO: Getting ocsp_signing cert info from NSS database
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info begins: ca_ocsp_signing
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmp0twy7jw7/password.txt -n ca_ocsp_signing -a
+2023-03-07 11:29:00 DEBUG: get_subsystem_cert
+2023-03-07 11:29:00 INFO: Getting sslserver cert info from CS.cfg
+2023-03-07 11:29:00 INFO: get_nssdb_cert_info
+2023-03-07 11:29:00 INFO: Getting sslserver cert info from NSS database
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info begins: sslserver
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpc0zfv3sq/password.txt -n sslserver -a
+2023-03-07 11:29:00 INFO: certutil returned data for cert
+2023-03-07 11:29:00 INFO: nssdb.get_cert ends
+2023-03-07 11:29:00 DEBUG: get_trust
+2023-03-07 11:29:00 DEBUG: fullname = sslserver
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpzqkwqa84/password.txt
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info ends: sslserver
+2023-03-07 11:29:00 DEBUG: get_subsystem_cert
+2023-03-07 11:29:00 INFO: Getting subsystem cert info from CS.cfg
+2023-03-07 11:29:00 INFO: get_nssdb_cert_info
+2023-03-07 11:29:00 INFO: Getting subsystem cert info from NSS database
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info begins: subsystem
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmp56bbgu__/password.txt -n subsystem -a
+2023-03-07 11:29:00 DEBUG: get_subsystem_cert
+2023-03-07 11:29:00 INFO: Getting audit_signing cert info from CS.cfg
+2023-03-07 11:29:00 INFO: get_nssdb_cert_info
+2023-03-07 11:29:00 INFO: Getting audit_signing cert info from NSS database
+2023-03-07 11:29:00 DEBUG: nssdb.get_cert_info begins: ca_audit_signing
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpf1xv7e0t/password.txt -n ca_audit_signing -a
+2023-03-07 11:29:00 INFO: nssdb.get_cert
+2023-03-07 11:29:00 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpw4z19oeg/password.txt -n ca_signing -a
+2023-03-07 11:29:00 INFO: Setting up signing certificate
+2023-03-07 11:29:01 INFO: Storing signing certificate
+2023-03-07 11:29:01 DEBUG: - cert: MIIDrjCCApagAwIBAgIBATANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwMVoXDTQzMDMwNzEwMjkwMVowSDEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDEfMB0GA1UEAwwWQ0EgU2lnbmluZyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANuc9tR0BDrnxFAsHnDyPfGdz7CWtjpGHzTepPtWbvHDSvve0mn3UBSoKmxez4KHErpS6Ui4yybsL0Opo/fyLhHbw+tJLnt+XPd96GrNB45NbGvPrlisstA//2pcqvM1nc3V9kPoIZORPnkrHk1TuBJ+AWRztwakWYhN2WHntPXb1tOet04xBZGF5KxxazPJnqmLkxgIz5g+Oigtui8fjZvqSZIWwsA2XcMJrly7eY2XDrkd6+9uDOvIrcCBHna1EtIsliokUXpGIklHN5txVppPEtq/DEVBESb6fdo0Hfz+jdh20OyRjq3SS8WQ75Et1EuqVr/xiL9BY+4AJV3RxakCAwEAAaOBojCBnzAfBgNVHSMEGDAWgBSwnihw3ri6S2+5hJP968Gs6S9JUzAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBxjAdBgNVHQ4EFgQUsJ4ocN64uktvuYST/evBrOkvSVMwPAYIKwYBBQUHAQEEMDAuMCwGCCsGAQUFBzABhiBodHRwOi8vdWJ1bnR1LWphbW15OjgwODAvY2Evb2NzcDANBgkqhkiG9w0BAQsFAAOCAQEATBeHTnw9e5ovfb0lOD3KrGjF4Rs1gq7NiCcsIy1ylJ9Xf3h0qMrZ7ol+nz0/aHbymL113Sfl+oShyyzxW/j9zDY5f7GtGLhWqOMyo//y1g8ZJ2OoaJtzk1DqbeD7I8umjJ6IYnNV/AbPYkZYTba6Nddo5+aW7l8/oF1dFLRpVwk4H/zaWOZq0vbf2fBuTNZHQ8UIsAgjCrRaH/USD13NnAwuzfkste8ycniaHsrV6uuV7j30Xd268q8LKewQ+xlR7h9HK2V3+L5Dgx64Atgv+MxMEAchYkMRWIbacMMNC8T6bxLkrs/5ePJGQrwCv+nRH8hkkaJKo/S+3PXHMhit3Q==
+2023-03-07 11:29:01 DEBUG: - request: MIICvzCCAacCAQAwSDEQMA4GA1UEChMHRVhBTVBMRTETMBEGA1UECxMKcGtpLXRvbWNhdDEfMB0GA1UEAxMWQ0EgU2lnbmluZyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANuc9tR0BDrnxFAsHnDyPfGdz7CWtjpGHzTepPtWbvHDSvve0mn3UBSoKmxez4KHErpS6Ui4yybsL0Opo/fyLhHbw+tJLnt+XPd96GrNB45NbGvPrlisstA//2pcqvM1nc3V9kPoIZORPnkrHk1TuBJ+AWRztwakWYhN2WHntPXb1tOet04xBZGF5KxxazPJnqmLkxgIz5g+Oigtui8fjZvqSZIWwsA2XcMJrly7eY2XDrkd6+9uDOvIrcCBHna1EtIsliokUXpGIklHN5txVppPEtq/DEVBESb6fdo0Hfz+jdh20OyRjq3SS8WQ75Et1EuqVr/xiL9BY+4AJV3RxakCAwEAAaAyMDAGCSqGSIb3DQEJDjEjMCEwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAcYwDQYJKoZIhvcNAQELBQADggEBABsP8x3p5kvdCWhT1MmOTrZnf7gQuzXzplyOT23Z0y1NjavKX5yFahOiV92xCR/Pe40d/QXyI1bKEHHvkzRYjsmBVhMT2krbf7BSxyDpljqEHukpsnNiA2dd6xb7bLxdVgMBnwCEmkVGGlF1n18YIa9doe5Ggj85tvgDZyzeSo3z6ZOhMpsNXSiL7fbCwTK7j1Om4m1SZfBLX5e4Sq4d+Iyzjz38uAISQjK1AXoDeGvBUXa9T3VKJKMTRBMsE7quz53+DblSEXsqaMfeuR35FbAlsiQ5QWvZK2XUDSpyrXLKli2+KLtOXQB2LakWSFZNKfpFBHBgRMgrFbR7b/PfD6w=
+2023-03-07 11:29:01 INFO: nssdb.get_cert
+2023-03-07 11:29:01 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmp05x4srmk/password.txt -n ca_ocsp_signing -a
+2023-03-07 11:29:01 INFO: Setting up ocsp_signing certificate
+2023-03-07 11:29:01 INFO: Storing ocsp_signing certificate
+2023-03-07 11:29:01 DEBUG: - cert: MIIDmTCCAoGgAwIBAgIBAjANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwMVoXDTI1MDIyNDEwMjkwMVowTTEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDEkMCIGA1UEAwwbQ0EgT0NTUCBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApf6Y/R8E2ZqXOqUZnxqo6FF6Otq8HX+Z3gg3NdnsYt7sbJ3T2+W+EchGgUgtkVhcq5Q/SW5Qg/k+xpy+2mQHhsU7PVQrJ3vQ8hdNxp5CzQWxg2xOgu6HxCuL8gl8J+iQRsPLTuASv2Mais/iAA9AEX7lFz5VlbJp83Q26j6qzQfwDWRzuKn6gDMSTXkxn13k1xgaOwI03PcrR2+r8AhZg8NoGICqfHl1NmsUw/55skVeB/OjTCrffzShKSkI9k9LooZjaYfc062rfcGnbpoZHNCl8fHKq1nBkkzjo51hdrZaROdMPa9CmJR2dlhaGwplzxrbUorldwDNGjdwD4zHbQIDAQABo4GIMIGFMB8GA1UdIwQYMBaAFLCeKHDeuLpLb7mEk/3rwazpL0lTMDwGCCsGAQUFBwEBBDAwLjAsBggrBgEFBQcwAYYgaHR0cDovL3VidW50dS1qYW1teTo4MDgwL2NhL29jc3AwEwYDVR0lBAwwCgYIKwYBBQUHAwkwDwYJKwYBBQUHMAEFBAIFADANBgkqhkiG9w0BAQsFAAOCAQEAZ+I2H9fevz/C+MNlpWu3jXz7pig4Rh6EzIvWcxia53yv98lcvOBvLLusRysetOlwswboCFN5PVnPbvjgqC/QCBVYW5JWq3M5Y0FCASyVjdRejNy/TxRvYbY8cSrMP0pxk94I522ERWUfAQvkoFrjavGLTwxIyyvy/ScQVV2XTjucf2Acz5XdJ5toQdaliSKs7KMP1ZcM/DVj9cemk+tgb5foNHyS2U1S5/ScdquSvTN43SOqDX3JAufCyVva9Ktp3IHhb4if5+TBHHD3Ium2HHFvFS+pCkSboXP3uxrl2JqMjTcmNesr14dPYrHHOauFyaYzJh1r0x0aHP3aXgRSRQ==
+2023-03-07 11:29:01 DEBUG: - request: MIICkjCCAXoCAQAwTTEQMA4GA1UEChMHRVhBTVBMRTETMBEGA1UECxMKcGtpLXRvbWNhdDEkMCIGA1UEAxMbQ0EgT0NTUCBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApf6Y/R8E2ZqXOqUZnxqo6FF6Otq8HX+Z3gg3NdnsYt7sbJ3T2+W+EchGgUgtkVhcq5Q/SW5Qg/k+xpy+2mQHhsU7PVQrJ3vQ8hdNxp5CzQWxg2xOgu6HxCuL8gl8J+iQRsPLTuASv2Mais/iAA9AEX7lFz5VlbJp83Q26j6qzQfwDWRzuKn6gDMSTXkxn13k1xgaOwI03PcrR2+r8AhZg8NoGICqfHl1NmsUw/55skVeB/OjTCrffzShKSkI9k9LooZjaYfc062rfcGnbpoZHNCl8fHKq1nBkkzjo51hdrZaROdMPa9CmJR2dlhaGwplzxrbUorldwDNGjdwD4zHbQIDAQABoAAwDQYJKoZIhvcNAQELBQADggEBABuSxhighy7q51mP2n4/Ub0DpTQu3IVNdect3C7ycw2oUPqlNZXMQhoDGged1yH0ngs86IWfurxgeInmh9gAk8enpx+Ufp//14LPcxvINdTBj2zetzEC8QUagI9rnURUs5sKi6B3Hd15KUTbCz4WZVv78zusTTH6yB3bNwG9TisZs5z5gx5BQ7WoNU0U3cc8uwmeViQ0ZLtzK9FTWShzUnE81jAntWClNmEiHYi1iK94vBGPopANvbF+jv7ZbPnV7xNETFzxLwIKLAxzUxnl0vZbu2Q0My4WHGoFMW1uxqI6y2Fcod3wbGjeDaseGVSmt+P1TSegeHLPXpYNAX1QQEg=
+2023-03-07 11:29:01 INFO: nssdb.get_cert
+2023-03-07 11:29:01 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpzlubw1p6/password.txt -n sslserver -a
+2023-03-07 11:29:01 INFO: certutil returned data for cert
+2023-03-07 11:29:01 INFO: nssdb.get_cert ends
+2023-03-07 11:29:01 INFO: Setting up sslserver certificate
+2023-03-07 11:29:02 INFO: Storing sslserver certificate
+2023-03-07 11:29:02 DEBUG: - cert: MIIDiTCCAnGgAwIBAgIBAzANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwMloXDTI1MDIyNDEwMjkwMlowPjEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDEVMBMGA1UEAwwMdWJ1bnR1LWphbW15MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzUT5OZ0XlbuPOMMNXn+n3O39/fHldx53aWRMttcjsIV6cmeH4Sj9tWt552ytn6hCf54Q6Q1t32xpDHtG/vRKJtOVEsfNF+KJZCXExuCx5NnDuQuJ9p2sSJk3FViJ0W4zGi1XYDCh0iomD2Nu9oE2dxV7ntYwKBHj55rdVuWN5HxNxkCQVDyUay1uBCUOaGol3vtyYmoDdsg3wt9rVCoIZ01F+PgDyKfMGAQB5f34m0AqOt7S8GLhQXKzy3Org30A4bPmkaEYCUh1nnOrVgZeOqVqIftzPeLM+6e3AcTH72yX4c8ZzQ47mRrl/OICOhIwkMm6Pe82h/OxiHAzNp1pSQIDAQABo4GHMIGEMB8GA1UdIwQYMBaAFLCeKHDeuLpLb7mEk/3rwazpL0lTMDwGCCsGAQUFBwEBBDAwLjAsBggrBgEFBQcwAYYgaHR0cDovL3VidW50dS1qYW1teTo4MDgwL2NhL29jc3AwDgYDVR0PAQH/BAQDAgSwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA0GCSqGSIb3DQEBCwUAA4IBAQAntXn/St6dabVUmUX+8iaP58S8qB8AK1FuioDQQKHMuBoYUHlTjSyEKCNNrvtIJrThuamtnLZB5eUawWpYgjy2iAK4woL1K9oYVLhAWAICUWhN6HiE4QnPAeH6dIuL8w6rd08yD/Uj9XspPS8KluzzeB4xCpyb4sIREgfKWNXFtFPUT0Xhhd5O0lde3mHG2tjL39LSWkvBj2MfDk9S1ILQfdjpmd5MIZCcQdbz+RR7xDEahQOfbGNNA8OEtkqOAEJfmQEEkZ+qYS+QHkiO35XVBiyc7X8RWoCd4N1tygKbV4/4YbaoN+fygt9Z0HZFf4NgfdOr0+4pTDemvJ4Kx+xL
+2023-03-07 11:29:02 DEBUG: - request: MIICgzCCAWsCAQAwPjEQMA4GA1UEChMHRVhBTVBMRTETMBEGA1UECxMKcGtpLXRvbWNhdDEVMBMGA1UEAxMMdWJ1bnR1LWphbW15MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzUT5OZ0XlbuPOMMNXn+n3O39/fHldx53aWRMttcjsIV6cmeH4Sj9tWt552ytn6hCf54Q6Q1t32xpDHtG/vRKJtOVEsfNF+KJZCXExuCx5NnDuQuJ9p2sSJk3FViJ0W4zGi1XYDCh0iomD2Nu9oE2dxV7ntYwKBHj55rdVuWN5HxNxkCQVDyUay1uBCUOaGol3vtyYmoDdsg3wt9rVCoIZ01F+PgDyKfMGAQB5f34m0AqOt7S8GLhQXKzy3Org30A4bPmkaEYCUh1nnOrVgZeOqVqIftzPeLM+6e3AcTH72yX4c8ZzQ47mRrl/OICOhIwkMm6Pe82h/OxiHAzNp1pSQIDAQABoAAwDQYJKoZIhvcNAQELBQADggEBAHTgHNB6wcrl5xXRx+9V/TzrFNpGd/v+v+y7sG+e4i71JPrSCRnZ7TUBa0VlxiqH19yEQLq29sF6eVRsJeLJwb9SXAczbBrccxCfWq4ipaoDcFvTOBfvGUDjU7QbkHlt+gox1Dmvjl81EzPL6Fk8vnNlXtYORsDuVelN2UZnGlF+3fJtWJaTqKtrVuGqSyZ8sKUN/fKwhiAIA0L7AE1cbZ10ppGjOCI8B8xM+SRiXD334Up/cVoOYrEMG2+IcYu8LYl+rkonKWGoVlYP4ONFvltP1QgqpCcRxapXiwfpGtTEkNMK8ayV6B13Xcw5IOMisW9bTzQSvbx4vetU1dEULnY=
+2023-03-07 11:29:02 INFO: nssdb.get_cert
+2023-03-07 11:29:02 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmp78uwjuvk/password.txt -n subsystem -a
+2023-03-07 11:29:02 INFO: Setting up subsystem certificate
+2023-03-07 11:29:02 INFO: Storing subsystem certificate
+2023-03-07 11:29:02 DEBUG: - cert: MIIDkjCCAnqgAwIBAgIBBDANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwMloXDTI1MDIyNDEwMjkwMlowRzEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDEeMBwGA1UEAwwVU3Vic3lzdGVtIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnhzexXzXzjCiB6UPfSbbMERU0jawszBZ+nazpSLm+VW9qE1KkXJoxGQYqn/sGM18cyZDkV1UlHV871FRPRerPiiDmBn/C6DQnt8wSdD93j6Osy/EH69Fms1NT+tjPQOLsSoU2rct2Z6mhntKnS8ut9ZCemYxjAke2kufSNxSLbMShIzR3I5DXCbvBqXNDkTYiziQKLzf9ushv512234PBUM7puxPxoOWsSe83Q3QUnhYYs+ODL/+QnqAsuQpTrn9ec1uwhRDB8OrLd1Ck7PJi2nJ17BBczl6B9c6xO+hMBarEf/k/4zdQ6EKcDy7iYyLh9BLLPRhkPQkDt9U+VnH6QIDAQABo4GHMIGEMB8GA1UdIwQYMBaAFLCeKHDeuLpLb7mEk/3rwazpL0lTMDwGCCsGAQUFBwEBBDAwLjAsBggrBgEFBQcwAYYgaHR0cDovL3VidW50dS1qYW1teTo4MDgwL2NhL29jc3AwDgYDVR0PAQH/BAQDAgTwMBMGA1UdJQQMMAoGCCsGAQUFBwMCMA0GCSqGSIb3DQEBCwUAA4IBAQDI0iuVWtEt7Iws7xtg2sRRi/kBT+yeQOYqEClpsK2+9VK8IAY348uapKvsCLGZGpFAhVCma092SuL9I0QNtTSBKA6828x5H92PhgPVyk3TpA/w2SXb8L5gwx8qbFtK09uxYuDoYhDEUckg7jLtI/mD6i+Pjuj3KKE1IjVyqC2itARulRFT+pc6C7fGY18TqJEO/LlcexvWgaNqzSbV13cQIZIFwxHgf1bfiUCAbur06I6EQ4f3ZiqN8hLptg9E+QagV3NYRqt7Q04a6UwXJT70XEjxsBgDOJ/gQ1sMLqT/FQfvILZIPcvyUVITzS0hRoIKxLS7NX4zrfoS863oZnJh
+2023-03-07 11:29:02 DEBUG: - request: MIICjDCCAXQCAQAwRzEQMA4GA1UEChMHRVhBTVBMRTETMBEGA1UECxMKcGtpLXRvbWNhdDEeMBwGA1UEAxMVU3Vic3lzdGVtIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnhzexXzXzjCiB6UPfSbbMERU0jawszBZ+nazpSLm+VW9qE1KkXJoxGQYqn/sGM18cyZDkV1UlHV871FRPRerPiiDmBn/C6DQnt8wSdD93j6Osy/EH69Fms1NT+tjPQOLsSoU2rct2Z6mhntKnS8ut9ZCemYxjAke2kufSNxSLbMShIzR3I5DXCbvBqXNDkTYiziQKLzf9ushv512234PBUM7puxPxoOWsSe83Q3QUnhYYs+ODL/+QnqAsuQpTrn9ec1uwhRDB8OrLd1Ck7PJi2nJ17BBczl6B9c6xO+hMBarEf/k/4zdQ6EKcDy7iYyLh9BLLPRhkPQkDt9U+VnH6QIDAQABoAAwDQYJKoZIhvcNAQELBQADggEBAAU/3FpwAI4gUUGLs5KFva0jU0xSCg+u4IxsvBUKtqkoWpgxdv43YI5HXC020uOlX5AK1HReHJoGJJ7NdSu/WoIXMRGaSg1XHSIT9EurKliUPcWcrB/hZMna+o8POuqdDk9sToFbCnwzC7O02Z6NZvICx07z7yo0hzSeMc/8y3ENr/xeLPHICBk8m5LTAy7krYibVDu+txBDFq8mBY9hZ4i8yO+/8t2aeBuUev3oVuHBm7m+iyxIlzlwq0+mop+WLHWx7VszQ8NgMcBTBp0PK8z74OyfPIhvbnaCLTuOQWrD6piQCO9mg/z0Nzd/Tk7ptKP4Pk1NCf3ruhor+kjBz4M=
+2023-03-07 11:29:02 INFO: nssdb.get_cert
+2023-03-07 11:29:02 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmphpwwt5lg/password.txt -n ca_audit_signing -a
+2023-03-07 11:29:02 INFO: Setting up audit_signing certificate
+2023-03-07 11:29:02 INFO: Storing audit_signing certificate
+2023-03-07 11:29:02 DEBUG: - cert: MIIDgjCCAmqgAwIBAgIBBTANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwMloXDTI1MDIyNDEwMjkwMlowTjEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDElMCMGA1UEAwwcQ0EgQXVkaXQgU2lnbmluZyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN/oUF2HEv9RPUCdSWmSTsKAl+jCFfD4VDz82GFWQWNnwNSbN8yH39PhtxirP8dSt0BHNejUe6kRIjlWw4fyZK6VzjZpMt5oYncRQyuInOT3ZWpij0/da219TSOk7Shqrlp/LboAmhLBw/lIeP4QTZKTkhy2PaT32qVqQG2HH89VmGV01TQcidzh0CdsVp+/EmQemF4ZVP53Xv88sCDyWp2m29X90zgX1/MzaQhWe/Wdb/BEYz757kcBPZ7yJSecv2GUmMty/vSN/O48up0Hfzw5YJrLfUhjt/YQzxUkSMHhO45eUpim+tQ/LQW8w5tBhCgRoLmfqmaLR2095ujXE4kCAwEAAaNxMG8wHwYDVR0jBBgwFoAUsJ4ocN64uktvuYST/evBrOkvSVMwDgYDVR0PAQH/BAQDAgbAMDwGCCsGAQUFBwEBBDAwLjAsBggrBgEFBQcwAYYgaHR0cDovL3VidW50dS1qYW1teTo4MDgwL2NhL29jc3AwDQYJKoZIhvcNAQELBQADggEBADiHUDRdcm+pMDm/toy9ZzBRbnE2TODzRQLgi9G4Xa4XwXWtHbWxZnqLN6k1bg8QHOya+SEbWrPu2UPxgukiDxb3TZb34mM46SYXHrkbvm6SGXCRTYbC/F5l6sRWQ9LJaQSk0Vc38SQxtFPA3y6KQUnBxizxMras7DtsrSsDsB+GJ0NHcg2gu66SzzTh7Gybx7o6OuZmF3GvkFy1YF66+0+nwYER1fjE3eY5tP9ljVtgXWsVWobg83VI5apKveCvBro+2i3aWZZ2Pxwg+k2MoVRWdBocqnFVIt5Lx9zoRk2YU6EnX6fr2CsJq59NBkBrKZWFaOgemytaGoQlI6stRQQ=
+2023-03-07 11:29:02 DEBUG: - request: MIICkzCCAXsCAQAwTjEQMA4GA1UEChMHRVhBTVBMRTETMBEGA1UECxMKcGtpLXRvbWNhdDElMCMGA1UEAxMcQ0EgQXVkaXQgU2lnbmluZyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN/oUF2HEv9RPUCdSWmSTsKAl+jCFfD4VDz82GFWQWNnwNSbN8yH39PhtxirP8dSt0BHNejUe6kRIjlWw4fyZK6VzjZpMt5oYncRQyuInOT3ZWpij0/da219TSOk7Shqrlp/LboAmhLBw/lIeP4QTZKTkhy2PaT32qVqQG2HH89VmGV01TQcidzh0CdsVp+/EmQemF4ZVP53Xv88sCDyWp2m29X90zgX1/MzaQhWe/Wdb/BEYz757kcBPZ7yJSecv2GUmMty/vSN/O48up0Hfzw5YJrLfUhjt/YQzxUkSMHhO45eUpim+tQ/LQW8w5tBhCgRoLmfqmaLR2095ujXE4kCAwEAAaAAMA0GCSqGSIb3DQEBCwUAA4IBAQBq8SFBfjmc5646Zf83gz8VdoCa7Xg8YG4ClpHdQWfC7ZNXFp+ef62nL0om9TVkBDxiXDsjBHCAVYqcpDCXpJ/rRYwu6MdiXdbWlC1xFEbtrdfnO7oSlO87ZQ7fZU1bnv8X0pyeBhExnsqGAsoGSnwWoq2sHAWNFtfPYP6PjtV+I3dwZkHUcZs2cOzHPY6L518/MglxeozQqsgiDORjtiqhGeQEWRJYv3l5KO33n4aTbIJFuheZaEy3nEHJuDYpZREKGyLIlSuwrz+Xvexk8latJ2Mxh4aoMIuctZZXc5w466fHP16sa5egdw6XB5XAJKSyWu7c7oLh261ZL4b2KnFr
+2023-03-07 11:29:02 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:29:02 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:29:02 INFO: Setting up subsystem user
+2023-03-07 11:29:02 INFO: Adding CA-ubuntu-jammy-8443
+2023-03-07 11:29:02 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-add --full-name CA-ubuntu-jammy-8443 --type agentType --state 1 --debug CA-ubuntu-jammy-8443
+2023-03-07 11:29:03 INFO: Adding subsystem certificate into CA-ubuntu-jammy-8443
+2023-03-07 11:29:03 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-cert-add --format PEM --debug CA-ubuntu-jammy-8443
+2023-03-07 11:29:04 INFO: Adding CA-ubuntu-jammy-8443 into Subsystem Group
+2023-03-07 11:29:04 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Subsystem Group CA-ubuntu-jammy-8443
+2023-03-07 11:29:05 INFO: Getting admin certificate
+2023-03-07 11:29:05 INFO: get_admin_cert
+2023-03-07 11:29:05 INFO: Generating CSR for cn=PKI Administrator,e=caadmin@example.com,ou=pki-tomcat,o=EXAMPLE
+2023-03-07 11:29:05 DEBUG: Command: certutil -R -d /root/.dogtag/pki-tomcat/ca/alias -s cn=PKI Administrator,e=caadmin@example.com,ou=pki-tomcat,o=EXAMPLE -k rsa -g 2048 -z /root/.dogtag/pki-tomcat/ca/alias/noise -f /root/.dogtag/pki-tomcat/ca/password.conf -o /root/.dogtag/pki-tomcat/ca/alias/admin_pkcs10.bin
+2023-03-07 11:29:05 INFO: Removing /root/.dogtag/pki-tomcat/ca/alias/noise
+2023-03-07 11:29:05 DEBUG: Command: rm -f /root/.dogtag/pki-tomcat/ca/alias/noise
+2023-03-07 11:29:05 DEBUG: Command: BtoA /root/.dogtag/pki-tomcat/ca/alias/admin_pkcs10.bin /root/.dogtag/pki-tomcat/ca/alias/admin_pkcs10.bin.asc
+2023-03-07 11:29:05 DEBUG: Admin cert: MIIDvDCCAqSgAwIBAgIBBjANBgkqhkiG9w0BAQsFADBIMRAwDgYDVQQKDAdFWEFNUExFMRMwEQYDVQQLDApwa2ktdG9tY2F0MR8wHQYDVQQDDBZDQSBTaWduaW5nIENlcnRpZmljYXRlMB4XDTIzMDMwNzEwMjkwNVoXDTI1MDIyNDEwMjkwNVowZzEQMA4GA1UECgwHRVhBTVBMRTETMBEGA1UECwwKcGtpLXRvbWNhdDEiMCAGCSqGSIb3DQEJARYTY2FhZG1pbkBleGFtcGxlLmNvbTEaMBgGA1UEAwwRUEtJIEFkbWluaXN0cmF0b3IwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHylePX+JbrfihqMlRja8BBM+rZgYbdcPRBlO9jA6n50op7+YBj5tfmULJHKrJ7+H9GcI7EsqnYODYa7o4JBI2qs4PxOS760NMxJ/bhVVe8fxbETSPVX1TxthgFVhjCOCjeZrv816rbfjawEZH8ecA3qmuuQVAW5RRpp0zWI1Jp4heOJyufbzV8bGWxts2Qr8JlkRZOtQ5iEu4eWut6KPZZAOk64ah8D+juf55+GYZhPQKfdb5Xx6lXCLtZgHzbfmve4CF73SE4zc4V7rZPmGhYp8h17hoUfTIv8gFL028UR61jAYXrjf9grneW8LtyMMUWvD+6nTHRB366vQ7tzKHAgMBAAGjgZEwgY4wHwYDVR0jBBgwFoAUsJ4ocN64uktvuYST/evBrOkvSVMwPAYIKwYBBQUHAQEEMDAuMCwGCCsGAQUFBzABhiBodHRwOi8vdWJ1bnR1LWphbW15OjgwODAvY2Evb2NzcDAOBgNVHQ8BAf8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMA0GCSqGSIb3DQEBCwUAA4IBAQA+/vxAmnHk0HRxXkropDun/M2epCGTopRGk79gIijzJU2aMarTry0pTYnPxsoBY/rtH54KpDTxw5rTi8qaIbHperk2bU686ubuYtHLEkB+Y6BmDluQi8w3Cs+oNiZZR3HORlPgl5s3qlblLD8p122FeI5jTAOCc/72VeGUVo3+xWxAOCsXtU6g2aQ2qt2ygTkgzHmO5xg9tOzwRsoyPYCc4F57ByyO8vzCqv8E2BnXsnlUtMHgUC+3D5Us9sshlkVAuq+TSAAjCQGcTvgpHN3FKtuO7i7q+iOwhfuW39rEDyBPGPwJwdaGB1pbOa89FtrA6MvsRPNlbnfbt4oBg9G1
+2023-03-07 11:29:05 INFO: process_admin_cert
+2023-03-07 11:29:05 INFO: Storing admin certificate into /root/.dogtag/pki-tomcat/ca_admin.cert
+2023-03-07 11:29:05 DEBUG: saving CA ubuntu-jammy 8443 Admin Certificate to file: /root/.dogtag/pki-tomcat/ca_admin.cert
+2023-03-07 11:29:05 INFO: Importing admin certificate into /root/.dogtag/pki-tomcat/ca/alias
+2023-03-07 11:29:05 DEBUG: nssdb.add_cert
+2023-03-07 11:29:05 DEBUG: Command: certutil -A -d /root/.dogtag/pki-tomcat/ca/alias -f /root/.dogtag/pki-tomcat/ca/password.conf -n caadmin -a -i /root/.dogtag/pki-tomcat/ca_admin.cert -t ,,
+2023-03-07 11:29:05 INFO: process_admin_p12: Exporting admin certificate into /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+2023-03-07 11:29:05 INFO: Creating /root/.dogtag/pki-tomcat
+2023-03-07 11:29:05 INFO: Exporting caadmin cert and key into /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+2023-03-07 11:29:05 DEBUG: Command: pk12util -d /root/.dogtag/pki-tomcat/ca/alias -o /root/.dogtag/pki-tomcat/ca_admin_cert.p12 -n caadmin -w /root/.dogtag/pki-tomcat/ca/pkcs12_password.conf -k /root/.dogtag/pki-tomcat/ca/password.conf -c AES-128-CBC -C NONE
+2023-03-07 11:29:06 INFO: Setting up admin user
+2023-03-07 11:29:06 DEBUG: Command: /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-add --full-name caadmin --email caadmin@example.com --password-file /tmp/tmprfyqq08n/password.txt --type adminType --state 1 --debug caadmin
+2023-03-07 11:29:07 INFO: Adding caadmin into Certificate Manager Agents
+2023-03-07 11:29:07 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Certificate Manager Agents caadmin
+2023-03-07 11:29:08 INFO: Adding caadmin into Administrators
+2023-03-07 11:29:08 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Administrators caadmin
+2023-03-07 11:29:09 INFO: Adding caadmin into Security Domain Administrators
+2023-03-07 11:29:09 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Security Domain Administrators caadmin
+2023-03-07 11:29:10 INFO: Adding caadmin into Enterprise CA Administrators
+2023-03-07 11:29:10 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise CA Administrators caadmin
+2023-03-07 11:29:11 INFO: Adding caadmin into Enterprise KRA Administrators
+2023-03-07 11:29:11 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise KRA Administrators caadmin
+2023-03-07 11:29:11 INFO: Adding caadmin into Enterprise RA Administrators
+2023-03-07 11:29:11 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise RA Administrators caadmin
+2023-03-07 11:29:12 INFO: Adding caadmin into Enterprise TKS Administrators
+2023-03-07 11:29:12 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise TKS Administrators caadmin
+2023-03-07 11:29:13 INFO: Adding caadmin into Enterprise OCSP Administrators
+2023-03-07 11:29:13 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise OCSP Administrators caadmin
+2023-03-07 11:29:14 INFO: Adding caadmin into Enterprise TPS Administrators
+2023-03-07 11:29:14 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Enterprise TPS Administrators caadmin
+2023-03-07 11:29:15 INFO: Adding certificate for caadmin
+2023-03-07 11:29:15 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-cert-add --format DER --debug caadmin
+2023-03-07 11:29:16 INFO: Creating security domain
+2023-03-07 11:29:16 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-sd-create --debug
+2023-03-07 11:29:18 INFO: Adding security domain manager
+2023-03-07 11:29:18 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-sd-host-add --hostname ubuntu-jammy --unsecure-port 8080 --secure-port 8443 --domain-manager --debug CA ubuntu-jammy 8443
+2023-03-07 11:29:20 INFO: Setting up database user
+2023-03-07 11:29:20 INFO: Adding pkidbuser
+2023-03-07 11:29:20 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-add --full-name pkidbuser --type agentType --state 1 --debug pkidbuser
+2023-03-07 11:29:21 DEBUG: get_subsystem_cert
+2023-03-07 11:29:21 INFO: Getting subsystem cert info from CS.cfg
+2023-03-07 11:29:21 INFO: get_nssdb_cert_info
+2023-03-07 11:29:21 INFO: Getting subsystem cert info from NSS database
+2023-03-07 11:29:21 DEBUG: nssdb.get_cert_info begins: subsystem
+2023-03-07 11:29:21 INFO: nssdb.get_cert
+2023-03-07 11:29:21 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpzvg_wntu/password.txt -n subsystem -a
+2023-03-07 11:29:21 INFO: certutil returned data for cert
+2023-03-07 11:29:21 INFO: nssdb.get_cert ends
+2023-03-07 11:29:21 DEBUG: get_trust
+2023-03-07 11:29:21 DEBUG: fullname = subsystem
+2023-03-07 11:29:21 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmpk79rdroy/password.txt
+2023-03-07 11:29:21 DEBUG: nssdb.get_cert_info ends: subsystem
+2023-03-07 11:29:21 INFO: nssdb.get_cert
+2023-03-07 11:29:21 DEBUG: Command: certutil -L -d /etc/pki/pki-tomcat/alias -f /tmp/tmp2j7usb4o/password.txt -n subsystem -a
+2023-03-07 11:29:21 INFO: certutil returned data for cert
+2023-03-07 11:29:21 INFO: nssdb.get_cert ends
+2023-03-07 11:29:21 INFO: Adding subsystem cert into pkidbuser
+2023-03-07 11:29:21 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-cert-add --format PEM --debug pkidbuser
+2023-03-07 11:29:22 INFO: Linking pkidbuser to subsystem cert: CN=Subsystem Certificate,OU=pki-tomcat,O=EXAMPLE
+2023-03-07 11:29:22 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-mod --add-see-also CN=Subsystem Certificate,OU=pki-tomcat,O=EXAMPLE --debug pkidbuser
+2023-03-07 11:29:23 INFO: Finding other users linked to subsystem cert
+2023-03-07 11:29:23 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-user-find --see-also CN=Subsystem Certificate,OU=pki-tomcat,O=EXAMPLE --debug --output-format json
+2023-03-07 11:29:23 INFO: Adding pkidbuser into Subsystem Group
+2023-03-07 11:29:23 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Subsystem Group pkidbuser
+2023-03-07 11:29:24 INFO: Adding pkidbuser into Certificate Manager Agents
+2023-03-07 11:29:24 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-group-member-add --debug Certificate Manager Agents pkidbuser
+2023-03-07 11:29:24 INFO: Updating CA ranges
+2023-03-07 11:29:24 DEBUG: Command: /sbin/runuser -u pkiuser -- /usr/share/pki/java-home/bin/java -classpath /usr/share/tomcat9/bin/tomcat-juli.jar:/usr/share/java/tomcat-servlet-api.jar:/usr/share/pki/ca/webapps/ca/WEB-INF/lib/*:/var/lib/pki/pki-tomcat/common/lib/*:/usr/share/pki/lib/* -Djavax.sql.DataSource.Factory=org.apache.commons.dbcp.BasicDataSourceFactory -Dcatalina.base=/var/lib/pki/pki-tomcat -Dcatalina.home=/usr/share/tomcat9 -Djava.endorsed.dirs= -Djava.io.tmpdir=/var/lib/pki/pki-tomcat/temp -Djava.util.logging.config.file=/etc/pki/pki-tomcat/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dcom.redhat.fips=false org.dogtagpki.server.cli.PKIServerCLI ca-range-update --debug
+2023-03-07 11:29:27 INFO: Starting CRL number: 0
+2023-03-07 11:29:27 INFO: Enabling profile subsystem
+2023-03-07 11:29:27 INFO: Storing subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:29:27 INFO: Storing registry config: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:29:27 INFO: CA configuration complete
+2023-03-07 11:29:27 INFO: Stopping PKI server
+2023-03-07 11:29:27 DEBUG: Command: systemctl stop pki-tomcatd@pki-tomcat.service
+2023-03-07 11:29:27 INFO: Waiting for PKI server to stop
+2023-03-07 11:29:28 INFO: PKI server stopped
+2023-03-07 11:29:28 INFO: Removing temp SSL server cert from internal token: sslserver
+2023-03-07 11:29:28 DEBUG: Command: certutil -D -d /etc/pki/pki-tomcat/alias -f /tmp/tmpprf4kl1y/password.txt -n sslserver
+2023-03-07 11:29:28 INFO: Importing permanent SSL server cert into internal token: sslserver
+2023-03-07 11:29:28 DEBUG: nssdb.add_cert
+2023-03-07 11:29:28 DEBUG: Command: certutil -A -d /etc/pki/pki-tomcat/alias -f /tmp/tmpkpct8oqb/internal_password.txt -n sslserver -a -i /tmp/tmp03j19hsy/sslserver.crt -t ,,
+2023-03-07 11:29:28 INFO: Starting PKI server
+2023-03-07 11:29:28 DEBUG: Command: systemctl start pki-tomcatd@pki-tomcat.service
+2023-03-07 11:29:29 INFO: Waiting for PKI server to start
+2023-03-07 11:29:36 INFO: PKI server started
+2023-03-07 11:29:36 INFO: Waiting for CA subsystem
+2023-03-07 11:29:37 INFO: Subsystem status: running
+2023-03-07 11:29:37 INFO: Finalizing subsystem creation
+2023-03-07 11:29:37 INFO: Loading instance: pki-tomcat
+2023-03-07 11:29:37 INFO: Loading global Tomcat config: /dev/null
+2023-03-07 11:29:37 INFO: Loading PKI Tomcat config: /usr/share/pki/etc/tomcat.conf
+2023-03-07 11:29:37 INFO: Loading instance Tomcat config: /etc/pki/pki-tomcat/tomcat.conf
+2023-03-07 11:29:37 INFO: Loading password config: /etc/pki/pki-tomcat/password.conf
+2023-03-07 11:29:37 INFO: Loading subsystem config: /var/lib/pki/pki-tomcat/ca/conf/CS.cfg
+2023-03-07 11:29:37 INFO: Loading subsystem registry: /var/lib/pki/pki-tomcat/ca/conf/registry.cfg
+2023-03-07 11:29:37 INFO: Loading instance registry: /etc/dogtag/tomcat/pki-tomcat/pki-tomcat
+2023-03-07 11:29:37 DEBUG: - user: pkiuser
+2023-03-07 11:29:37 DEBUG: - group: pkiuser
+2023-03-07 11:29:37 DEBUG: Command: systemctl enable pki-tomcatd@pki-tomcat.service
+2023-03-07 11:29:37 INFO: END spawning CA subsystem in pki-tomcat instance
+2023-03-07 11:29:37 INFO: Creating /var/log/pki/pki-tomcat/ca/archive/spawn_deployment.cfg.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: cp -p /etc/dogtag/tomcat/pki-tomcat/ca/deployment.cfg /var/log/pki/pki-tomcat/ca/archive/spawn_deployment.cfg.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: chmod 660 /var/log/pki/pki-tomcat/ca/archive/spawn_deployment.cfg.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: chown 114:122 /var/log/pki/pki-tomcat/ca/archive/spawn_deployment.cfg.20230307112835
+2023-03-07 11:29:37 INFO: Creating /var/log/pki/pki-tomcat/ca/archive/spawn_manifest.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: cp -p /etc/dogtag/tomcat/pki-tomcat/ca/manifest /var/log/pki/pki-tomcat/ca/archive/spawn_manifest.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: chmod 660 /var/log/pki/pki-tomcat/ca/archive/spawn_manifest.20230307112835
+2023-03-07 11:29:37 DEBUG: Command: chown 114:122 /var/log/pki/pki-tomcat/ca/archive/spawn_manifest.20230307112835

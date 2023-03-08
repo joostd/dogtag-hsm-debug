@@ -1,0 +1,47 @@
+# SOFTHSM
+
+pkcs11-tool --module /usr/lib/softhsm/libsofthsm2.so -t
+# no errors
+modutil -dbdir /etc/pki/pki-tomcat/alias -list softhsm
+# lists softhsm slots
+certutil -d /etc/pki/pki-tomcat/alias -h softhsm -K -h Dogtag -f password 
+# no keys found
+certutil -d /etc/pki/pki-tomcat/alias -h softhsm -L -h internal -f password -n sslserver
+# internal sslserver cert is generated
+modutil -dbdir /etc/pki/pki-tomcat/alias -rawlist 
+# lists both modules
+
+# https://www.dogtagpki.org/wiki/Java_PKCS11
+# vi /lib/jvm/java-11-openjdk-amd64/conf/security/nss.cfg
+# security.provider.7=sun.security.pkcs11.SunPKCS11 /etc/pki/nssdb/pkcs11.cfg
+# grep softhsm /etc/pki/pki-tomcat/alias/pkcs11.txt
+
+# maybe?
+# security.provider.10=sun.security.pkcs11.SunPKCS11 ${java.home}/lib/security/nss.cfg
+# https://github.com/dogtagpki/tomcatjss/issues/41
+
+ls -l /usr/share/pki/etc/pki.conf /etc/pki/pki.conf 
+https://github.com/dogtagpki/jss/issues/682#issuecomment-1299284671
+
+##### SOLUTION FOR SOFTHSM #######
+
+
+chmod 755 /var/lib/softhsm
+chmod 1777 /var/lib/softhsm/tokens
+chmod 777 /var/lib/softhsm -Rv
+
+# keys are generated:
+certutil -d /etc/pki/pki-tomcat/alias -h softhsm -K -h Dogtag -f password 
+certutil: Checking token "Dogtag" in slot "SoftHSM slot ID 0x7f769a3c"
+< 0> rsa      87ee65c7294f7abbff65821e8b54f3cabbdfdd2b   ca_signing
+< 1> rsa      c7bae58f78e840729578aae6620b2a38749b7992   ca_audit_signing
+< 2> rsa      eb4d448da76756deea32715f808da672776fcb9e   subsystem
+< 3> rsa      e1cb41021b37c4b55d2032b29fad45e59474f9c2   ca_ocsp_signing
+
+however:
+
+# Feb 24 13:38:19 ubuntu-jammy pki-tomcat[14970]: SEVERE: Certificate not found: Dogtag:sslserver
+
+Need to apply this patch:
+
+https://github.com/dogtagpki/pki/commit/518a3e5c4415e7683baf9392bc8725b3fb587a9f

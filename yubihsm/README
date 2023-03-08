@@ -1,0 +1,26 @@
+# YUBIHSM
+
+ssh 127.0.0.1 -l vagrant -p 2222 -o "UserKnownHostsFile /dev/null" -i /Users/jodi/dogtag/ubuntu/.vagrant/machines/default/virtualbox/private_key -o "StrictHostKeyChecking no" -R 12345:localhost:12345
+
+or
+
+vagrant ssh -- -R 12345:localhost:12345
+
+export YUBIHSM_PKCS11_CONF=/vagrant/yubihsm_pkcs11.conf
+export YUBIHSM_PKCS11_MODULE=/usr/lib/x86_64-linux-gnu/pkcs11/yubihsm_pkcs11.so
+
+
+pkcs11-tool --module $YUBIHSM_PKCS11_MODULE --pin 0001password -t
+# no errors
+modutil -dbdir /etc/pki/pki-tomcat/alias -list yubihsm
+# lists yubihsm slots
+certutil -d /etc/pki/pki-tomcat/alias -h yubihsm -K -h YubiHSM -f password 
+# no keys found
+certutil -d /etc/pki/pki-tomcat/alias -h yubihsm -L -h internal -f password -n sslserver
+# internal sslserver cert is generated
+modutil -dbdir /etc/pki/pki-tomcat/alias -rawlist 
+# lists both modules
+
+
+
+

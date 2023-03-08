@@ -1,0 +1,33 @@
+root@primary:/home/ubuntu# pkispawn -f /home/ubuntu/Home/dev/dogtag-hsm-debug/nohsm/ca.cfg -s CA
+Loading deployment configuration from /home/ubuntu/Home/dev/dogtag-hsm-debug/nohsm/ca.cfg.
+Installation log: /var/log/pki/pki-ca-spawn.20230307095307.log
+Installing CA into /var/lib/pki/pki-tomcat.
+Notice: Trust flag u is set automatically if the private key is present.
+/usr/lib/python3/dist-packages/urllib3/connection.py:455: SubjectAltNameWarning: Certificate for primary has no `subjectAltName`, falling back to check for a `commonName` for now. This feature is being removed by major browsers and deprecated by RFC 2818. (See https://github.com/urllib3/urllib3/issues/497 for details.)
+  warnings.warn(
+
+    ==========================================================================
+                                INSTALLATION SUMMARY
+    ==========================================================================
+
+      Administrator's username:             caadmin
+      Administrator's PKCS #12 file:
+            /root/.dogtag/pki-tomcat/ca_admin_cert.p12
+
+      Administrator's certificate nickname:
+            caadmin
+      Administrator's certificate database:
+            /root/.dogtag/pki-tomcat/ca/alias
+
+      To check the status of the subsystem:
+            systemctl status pki-tomcatd@pki-tomcat.service
+
+      To restart the subsystem:
+            systemctl restart pki-tomcatd@pki-tomcat.service
+
+      The URL for the subsystem is:
+            https://primary:8443/ca
+
+      PKI instances will be enabled upon system boot
+
+    ==========================================================================
