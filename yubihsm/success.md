@@ -1,3 +1,5 @@
+Version info:
+
 ```
 $ curl http://localhost:12345/connector/status
 status=OK
@@ -7,6 +9,8 @@ pid=88712
 address=localhost
 port=12345
 ```
+
+Certificates are successfully generated on the HSM (as seen through PKCS#11):
 
 ```
 $ pkcs11-tool --module $YUBIHSM_PKCS11_MODULE --login --pin 0001password --list-objects --type cert
@@ -25,6 +29,8 @@ Certificate Object; type = X.509 cert
   ID:         09f50c099ae0c8eab78241b107b13794318f3844
 ```
 
+Certificates in the NSS db (both YubiHSM and internal):
+
 ```
 # certutil -d /etc/pki/pki-tomcat/alias -L
 
@@ -38,6 +44,8 @@ Subsystem Certificate - EXAMPLE                              c,c,c
 CA Audit Signing Certificate - EXAMPLE                       ,,P  
 ```
 
+Details of the `sslserver` certificate (internal):
+
 ```
 # pki -d /etc/pki/pki-tomcat/alias nss-cert-show sslserver
   Serial Number: 0
@@ -48,6 +56,8 @@ CA Audit Signing Certificate - EXAMPLE                       ,,P
   Trust Attributes: CTu,Cu,Cu
 
 ```
+
+Details of the `ca_signing` certificate (YubiHSM):
 
 ```
 # pki -d /etc/pki/pki-tomcat/alias nss-cert-show YubiHSM:ca_signing
@@ -62,6 +72,7 @@ Enter password for YubiHSM
 
 ```
 
+Details of the `caadmin` client certificate (stored in the client database):
 
 ```
 # pki -d /root/.dogtag/pki-tomcat/ca/alias nss-cert-show caadmin
@@ -72,4 +83,3 @@ Enter password for YubiHSM
   Not Valid After: Fri Feb 14 21:01:47 UTC 2025
   Trust Attributes: u,u,u
 ```
-
